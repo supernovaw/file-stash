@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>File stash</title>
+	%sveltekit.head%
+	<style>
+		html {
+			color-scheme: dark;
+			background-color: #1a1d1c;
+			color: white;
+			font-family: "SF Pro Display", "SF Pro Text", -apple-system, sans-serif;
+		}
+
+		button,
+		input {
+			font-family: "SF Pro Display", "SF Pro Text", -apple-system, sans-serif;
+		}
+
+		body {
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100svh;
+			box-sizing: border-box;
+			padding: 50px 20px;
+		}
+
+		button {
+			background-color: #222;
+			box-shadow: 0px 1px 4px black;
+			color: inherit;
+			font: inherit;
+			border: none;
+			border-radius: 0.2em;
+			outline: none;
+			cursor: pointer;
+			user-select: none;
+			padding: 4px 10px;
+			transition: 50ms ease-out;
+		}
+
+		button:focus-visible,
+		button:hover:not(:disabled) {
+			background-color: #333;
+		}
+
+		button:focus-visible {
+			text-decoration-color: white;
+		}
+
+		button:active {
+			color: #bbb;
+			transform: translateY(1px);
+		}
+
+		button:disabled {
+			transform: none;
+			cursor: auto;
+			opacity: 0.5;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		input[type="file"] {
+			background-color: #373737;
+			color: inherit;
+			font: inherit;
+			border: none;
+			border-radius: 0.2em;
+			outline: none;
+			padding: 4px 6px;
+			transition: background-color .1s ease-out, box-shadow .1s ease-out;
+		}
+
+		input[type="text"]:focus {
+			background-color: #272727;
+			box-shadow: 0 1px 6px black;
+		}
+	</style>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+</html>
