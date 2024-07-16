@@ -11,7 +11,7 @@ export function compareStrings(a, b) {
     let differing = a.length === b.length ? 0 : 1;
     const minlen = Math.min(a.length, b.length);
     for (let i = 0; i < minlen; i++) {
-        differing |= a[i] ^ b[i];
+        differing |= a.charCodeAt(i) ^ b.charCodeAt(i);
     }
     return differing === 0;
 }
